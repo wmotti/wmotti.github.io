@@ -1,0 +1,12 @@
+# Site settings
+title: Where the rubber meets the road - awesome IT adventures
+email: wmotti@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Awesome IT adventures
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://wmotti.github.io" # the base hostname & protocol for your site
+twitter_username: wmotti
+github_username:  wmotti
+
+# Build settings
+markdown: kramdown
