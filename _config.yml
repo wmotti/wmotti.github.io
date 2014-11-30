@@ -14,3 +14,4 @@ markdown: kramdown
 # Plugins
 gems:
   - jekyll-sitemap
+  - jemoji
