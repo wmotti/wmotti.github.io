@@ -10,3 +10,7 @@ github_username:  wmotti
 
 # Build settings
 markdown: kramdown
+
+# Plugins
+gems:
+  - jekyll-sitemap
