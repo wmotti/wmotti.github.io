@@ -1,0 +1,29 @@
+.cookienotice-container {
+    font: inherit;
+    z-index: 9999;
+    line-height: 30px;
+    display: none;
+}
+
+.cookienotice-content {
+    margin: 0 auto;
+    clear: both;
+    overflow: auto;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+
+}
+
+.cookienotice-content a {
+    color: white;
+}
+
+.cookienotice-content a.more-info {
+    text-decoration: underline;
+}
+
+.cookienotice-content a.cookienotice-button {
+    cursor: pointer;
+}

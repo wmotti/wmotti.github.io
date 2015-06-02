@@ -1,0 +1,38 @@
+<div id="cookienotice-container" class="cookienotice-container">
+    <div class="cookienotice-content">
+        Cookies are used to give you the best experience on this blog. If you continue, you consent to receive all cookies.
+        <a class="more-info" href="/cookies.html" title="More info">More info</a>
+        <a class="cookienotice-button" title="close"><strong>Ok, close</strong></a>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function acceptCookies() {
+        Cookies.set('accept_cookies', 1, { expires: 365, path: '/' });
+        Cookies.set('accept_cookies_views', 0, { expires: 365, path: '/' });
+        $('#cookienotice-container').slideUp();
+    }
+
+    function checkCookie() {
+        var accept_cookies = Cookies.get('accept_cookies');
+        var accept_cookies_views = Cookies.get('accept_cookies_views');
+        if (accept_cookies == 1) return;
+        if (accept_cookies_views != null && accept_cookies_views != '' && parseInt(accept_cookies_views) > 3)
+            return;
+        $('#cookienotice-container').slideDown();
+        if (accept_cookies_views == null || accept_cookies_views == '')
+            Cookies.set('accept_cookies_views', 1, { expires: 365, path: '/' });
+        else  {
+            accept_cookies_views = parseInt(accept_cookies_views) + 1;
+            Cookies.set('accept_cookies_views', accept_cookies_views, { expires: 365, path: '/' });
+        }
+    }
+
+    $("a.cookienotice-button").click(function(){
+        acceptCookies();
+    });
+
+    $().ready(function(){
+        checkCookie();
+    });
+</script>
